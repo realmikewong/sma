@@ -1,0 +1,10 @@
+<svg id="Component_44_3" data-name="Component 44 – 3" xmlns="http://www.w3.org/2000/svg" width="41.851" height="41.767" viewBox="0 0 41.851 41.767">
+  <g id="Icon_feather-arrow-up-right" data-name="Icon feather-arrow-up-right" transform="matrix(0.985, 0.174, -0.174, 0.985, 17.507, 14.404)">
+    <path id="Path_28" data-name="Path 28" d="M0,11.338,10.324,0" transform="translate(0 0)" fill="none" stroke="#0079c4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_29" data-name="Path 29" d="M0,0,10.32,0l0,11.335" transform="translate(0.004 0)" fill="none" stroke="#0079c4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+  <g id="Ellipse_2" data-name="Ellipse 2" fill="none" stroke="#0079c4" stroke-width="1.5">
+    <ellipse cx="20.925" cy="20.883" rx="20.925" ry="20.883" stroke="none"/>
+    <ellipse cx="20.925" cy="20.883" rx="20.175" ry="20.133" fill="none"/>
+  </g>
+</svg>

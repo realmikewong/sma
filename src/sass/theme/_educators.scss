@@ -1,0 +1,331 @@
+section.page-hero.educators {
+  .bg-image {
+    opacity: 1;
+  }
+}
+
+section.educators-our-initiatives {
+  background: rgb(19, 107, 229);
+  background: linear-gradient(
+    235deg,
+    rgba(19, 107, 229, 1) 0%,
+    rgba(39, 82, 224, 1) 100%
+  );
+
+  .image-container {
+    min-height: 260px;
+    margin-bottom: 6px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 6px;
+      background: rgb(4, 213, 249);
+      background: linear-gradient(
+        235deg,
+        rgba(4, 213, 249, 1) 0%,
+        rgba(17, 180, 214, 1) 100%
+      );
+    }
+  }
+
+  .title {
+    color: $white;
+    @include font-size(1.25rem);
+    font-family: $font-family-serif;
+  }
+
+  a.link {
+    color: #b2fcff;
+    @include font-size(1.25rem);
+    font-family: $font-family-serif;
+  }
+
+  @include media-breakpoint-up(md) {
+    .image-container {
+      min-height: 165px;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .image-container {
+      min-height: 200px;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .image-container {
+      min-height: 300px;
+    }
+  }
+}
+
+section.educators-first-block {
+  background: rgb(213, 244, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(213, 244, 255, 1) 0%,
+    rgba(242, 251, 255, 1) 100%
+  );
+
+  .image-box .details a.vp-a {
+    text-transform: none;
+  }
+
+  .content-wrapper {
+    position: relative;
+    z-index: 2;
+
+    h3 {
+      @include font-size(2.813rem);
+      color: #0071e2;
+      border-bottom: 1px solid #d8e5f0;
+      margin-bottom: 30px;
+      max-width: 700px;
+      padding-bottom: 10px;
+    }
+
+    p {
+      @include font-size(1.875rem);
+      margin-bottom: 30px;
+    }
+
+    h4 {
+      color: #1b5a90;
+      font-family: $font-family-serif;
+      @include font-size(2.1rem);
+      padding-bottom: 10px;
+      border-bottom: 1px solid #d8e5f0;
+      margin-bottom: 30px;
+      max-width: 700px;
+    }
+  }
+
+  .image-box {
+    position: relative;
+    z-index: 3;
+  }
+
+  .row {
+    overflow: visible;
+  }
+
+  .video-wrapper {
+    position: relative;
+  }
+
+  .polygon {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 115%;
+    width: 100%;
+    z-index: 1;
+    background: rgb(213, 244, 255);
+    background: linear-gradient(
+      135deg,
+      rgba(213, 244, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 80%
+    );
+  }
+
+  @include media-breakpoint-up(md) {
+    .polygon {
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      left: -15px;
+    }
+  }
+}
+
+section.educators-second-block {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(232, 250, 255, 1) 46%,
+    rgba(255, 255, 255, 1) 100%
+  );
+
+  .image-box .details a.vp-a {
+    text-transform: none;
+  }
+
+  h3 {
+    @include font-size(2.813rem);
+    color: #0071e2;
+    border-bottom: 1px solid #d8e5f0;
+    padding-bottom: 10px;
+  }
+
+  p,
+  li {
+    @include font-size(1.875rem);
+  }
+
+  h4 {
+    font-family: $font-family-sans-serif;
+    @include font-size(2.188rem);
+    color: #0025a0;
+    margin: 60px 0;
+  }
+
+  .row {
+    overflow: visible;
+  }
+
+  h2 {
+    @include font-size(3.125rem);
+    color: #0025a0;
+    border-bottom: 1px solid #bfd8f4;
+  }
+
+  h5 {
+    color: #0025a0;
+    @include font-size(2.188rem);
+  }
+
+  h4.video-title {
+    color: #1b5a90;
+    font-family: $font-family-serif;
+    @include font-size(2.1rem);
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d8e5f0;
+    margin-bottom: 30px;
+  }
+
+  .main-wrapper {
+    position: relative;
+    z-index: 3;
+  }
+
+  .video-wrapper {
+    position: relative;
+
+    .polygon {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
+      position: absolute;
+      right: 50px;
+      bottom: 0;
+      height: 105%;
+      width: 90vw;
+      z-index: 1;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(248, 253, 255, 1) 100%
+      );
+    }
+  }
+}
+
+section.educators-awards {
+  .content-wrapper {
+    h3 {
+      @include font-size(2.813rem);
+      color: #0071e2;
+      border-bottom: 1px solid #d8e5f0;
+      padding-bottom: 10px;
+    }
+
+    p,
+    li {
+      @include font-size(1.875rem);
+    }
+
+    h5 {
+      color: #0025a0;
+      @include font-size(2.188rem);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .year-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    h3 {
+      @include font-size(5rem);
+      color: #b1ddff;
+      margin: 50px 0;
+    }
+
+    .line {
+      flex: 1;
+      height: 1px;
+      background-color: #93c5de;
+    }
+  }
+
+  .awards-list {
+    h5 {
+      color: #0025a0;
+      @include font-size(2.188rem);
+    }
+
+    p,
+    li {
+      @include font-size(1.875rem);
+    }
+
+    ul {
+      li {
+        background-image: url("../images/star-icon.svg");
+        background-repeat: no-repeat;
+        padding: 10px;
+        background-position-y: 14px;
+        padding-left: 100px;
+        display: block;
+        color: #41689d;
+
+        h5 {
+          border-bottom: 1px solid #d1e0f1;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .polygon {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60%;
+    width: 100%;
+    z-index: 1;
+
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(232, 246, 255, 1) 100%
+    );
+  }
+
+  @include media-breakpoint-up(md) {
+    ul {
+      li {
+        padding: 20px;
+      }
+    }
+  }
+}

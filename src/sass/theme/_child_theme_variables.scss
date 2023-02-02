@@ -1,0 +1,285 @@
+// Fonts
+$font-family-sans-serif: "garamondregular", sans-serif;
+$font-family-serif: "action_sansregular", sans-serif;
+$font-family-serif-bold: "action_sansbold", sans-serif;
+$font-family-serif-light: "action_sanslight", sans-serif;
+$font-family-serif-medium: "action_sansmedium", sans-serif;
+
+$body-font: $font-family-sans-serif;
+$headline-font: $font-family-sans-serif;
+$subheadline-font: $font-family-sans-serif;
+$font-family-base: $font-family-serif;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-lg: $font-size-base * 1.25;
+$font-size-sm: $font-size-base * 0.875;
+$font-size-xs: $font-size-base * 0.75;
+$line-height-base: 1.6;
+$lead-font-size: $font-size-base * 1.375;
+$small-font-size: 0.75em !default;
+$spacer: 1rem;
+$headings-margin-bottom: $spacer;
+$headings-line-height: 1.2;
+
+// Colors
+$primary: #0000f7;
+$secondary: #0f125c;
+$gray: $secondary;
+$light-gray: #f2f2f2;
+$dark-gray: #3f3f41;
+$white: #ffffff;
+$black: $primary;
+$light: $light-gray;
+$dark: $primary;
+$tan: #d9d1c7;
+$sky-blue: #75aabf;
+
+// Body
+$body-bg: $white;
+$body-color: $secondary;
+$headings-color: $secondary;
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+//Containers
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 100%,
+  xl: 100%,
+  xxl: 100%,
+);
+
+$enable-negative-margins: true;
+$grid-gutter-width: 2.5rem;
+$spacer: 2.5rem;
+$container-padding-x: $grid-gutter-width;
+
+// Links
+$link-color: $secondary;
+$link-decoration: none;
+$link-hover-color: $dark;
+$link-hover-decoration: none;
+
+// Buttons
+// $input-btn-padding-y:  .125rem;
+// $input-btn-padding-x:  1.25rem;
+// $input-btn-padding-y-sm: .0875rem;
+// $input-btn-padding-x-sm: 1rem;
+// $input-btn-padding-y-lg:  .375rem;
+// $input-btn-padding-x-lg:  1rem;
+// $btn-font-size-lg: 1.125rem;
+// $btn-line-height: 1.25;
+$btn-font-family: $font-family-serif;
+$btn-box-shadow: none;
+$btn-focus-box-shadow: none;
+$btn-active-box-shadow: none;
+$btn-border-radius: 0rem;
+$btn-border-radius-lg: 0rem;
+$btn-border-radius-sm: 0rem;
+$btn-hover-bg-shade-amount: 25%;
+$btn-hover-bg-tint-amount: 25%;
+
+$btn-close-color: $black;
+$btn-close-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$btn-close-color}'><path d='M1.7,0C1.7,0,1.7,0,1.7,0L8,6.3L14.3,0L16,1.7L9.7,8l6.3,6.3L14.3,16L8,9.7L1.7,16L0,14.3L6.3,8L0,1.7L1.7,0z' /></svg>");
+
+// Navs
+$nav-link-padding-y: 0.375rem;
+// $nav-link-padding-x:                1rem ;
+// $navbar-nav-link-padding-x:         1rem ;
+$nav-link-font-size: 1rem;
+$navbar-light-color: $secondary;
+$navbar-light-hover-color: $dark;
+$navbar-light-active-color: $dark;
+$navbar-light-toggler-border-color: transparent;
+
+// Forms
+$input-btn-border-width: 1.5px;
+$input-color: $primary;
+$input-border-color: $primary;
+$input-border-width: 1.5px;
+$input-border-radius: 0;
+$input-bg: transparent;
+$input-group-addon-bg: transparent;
+$input-group-addon-padding-x: 0.25rem;
+
+//Carousels
+$carousel-control-color: $white;
+$carousel-dark-control-icon-filter: invert(0.6) grayscale(100) !default;
+$carousel-control-width: 60px;
+$carousel-control-opacity: 0.75 !default;
+$carousel-control-hover-opacity: 1 !default;
+$carousel-control-icon-width: 3rem;
+$carousel-indicator-width: 10px;
+$carousel-indicator-height: 10px;
+$carousel-indicator-hit-area-height: 10px;
+$carousel-indicator-spacer: 5px;
+$carousel-indicator-opacity: 0.6;
+$carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$carousel-control-color}'><path d='M21.5,0L6.4,15l15.1,15h1.1l-15-15l15-15L21.5,0z'/></svg>") !default;
+$carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='#{$carousel-control-color}'><path d='M7.4,0l15,15l-15,15h1.1l15.1-15L8.5,0H7.4z'/></svg>") !default;
+
+//Modal
+$modal-content-border-color: $secondary;
+$modal-content-border-width: 7px;
+$modal-header-border-color: $white;
+$modal-footer-border-color: $light-gray;
+$modal-footer-border-width: 2px;
+// Timing Function
+$freehand-timing-function: ease-in-out;
+$mytransition: all 0.3s ease-in-out;
+
+// Embed Responsive Ratios
+$aspect-ratios: (
+  "1x1": 100%,
+  "2x1": calc(1 / 2 * 100%),
+  "4x3": calc(3 / 4 * 100%),
+  "16x9": calc(9 / 16 * 100%),
+  "21x9": calc(9 / 21 * 100%),
+  "30x11": calc(11 / 30 * 100%),
+  "5x2": calc(2 / 5 * 100%),
+  "5x3": calc(3 / 5 * 100%),
+  "7x10": calc(10 / 7 * 100%),
+  "9x10": calc(10 / 9 * 100%),
+  "4x5": calc(5 / 4 * 100%),
+  "3x4": calc(4 / 3 * 100%),
+);
+
+// Vendor Prefixes
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+$sass-burger-add-vendor-prefixes: true;
+
+// Burger
+@mixin burger(
+  $width: 30px,
+  $height: 5px,
+  $gutter: 3px,
+  $color: #000,
+  $border-radius: 0,
+  $transition-duration: 0.3s
+) {
+  $burger-height: $height !global;
+  $burger-gutter: $gutter !global;
+
+  position: relative;
+  margin-top: $height + $gutter;
+  margin-bottom: $height + $gutter;
+
+  @if $sass-burger-add-vendor-prefixes {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  user-select: none;
+
+  // 1. Fixes jagged edges in Firefox, see issue #10.
+  &,
+  &::before,
+  &::after {
+    display: block;
+    width: $width;
+    height: $height;
+    background-color: $color;
+    outline: 1px solid transparent; // 1
+    @if $border-radius != 0 {
+      border-radius: $border-radius;
+    }
+
+    @if $sass-burger-add-vendor-prefixes {
+      -webkit-transition-property: background-color, -webkit-transform;
+      -moz-transition-property: background-color, -moz-transform;
+      -o-transition-property: background-color, -o-transform;
+    }
+    transition-property: background-color, transform;
+
+    @if $sass-burger-add-vendor-prefixes {
+      -webkit-transition-duration: $transition-duration;
+      -moz-transition-duration: $transition-duration;
+      -o-transition-duration: $transition-duration;
+    }
+    transition-duration: $transition-duration;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+  }
+
+  &::before {
+    top: -($height + $gutter);
+  }
+
+  &::after {
+    top: $height + $gutter;
+  }
+}
+
+// Select parts of the burger
+@mixin burger-parts {
+  &,
+  &::before,
+  &::after {
+    @content;
+  }
+}
+
+@mixin burger-top {
+  &::before {
+    @content;
+  }
+}
+
+@mixin burger-middle {
+  & {
+    @content;
+  }
+}
+
+@mixin burger-bottom {
+  &::after {
+    @content;
+  }
+}
+
+// Burger animations
+@mixin burger-to-cross($color: auto) {
+  & {
+    background-color: transparent;
+  }
+  @if ($color != auto) {
+    &::before,
+    &::after {
+      background-color: $color;
+    }
+  }
+  &::before {
+    @if $sass-burger-add-vendor-prefixes {
+      -webkit-transform: translateY($burger-gutter + $burger-height)
+        rotate(45deg);
+      -moz-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+      -ms-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+      -o-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+    }
+    transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+  }
+  &::after {
+    @if $sass-burger-add-vendor-prefixes {
+      -webkit-transform: translateY(-($burger-gutter + $burger-height))
+        rotate(-45deg);
+      -moz-transform: translateY(-($burger-gutter + $burger-height))
+        rotate(-45deg);
+      -ms-transform: translateY(-($burger-gutter + $burger-height))
+        rotate(-45deg);
+      -o-transform: translateY(-($burger-gutter + $burger-height))
+        rotate(-45deg);
+    }
+    transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+  }
+}

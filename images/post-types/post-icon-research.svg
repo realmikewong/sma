@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7.965" height="22.53" viewBox="0 0 7.965 22.53">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.828" y1="0.755" x2="0.5" y2="0.274" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00FF89"/>
+      <stop offset="1" stop-color="#01C3B4"/>
+    </linearGradient>
+  </defs>
+  <path id="DIamond" d="M2389.891,955l-7.965,8.839V977.53l7.965-7.148Z" transform="translate(-2381.926 -955)" fill="url(#linear-gradient)"/>
+</svg>

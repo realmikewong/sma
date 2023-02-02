@@ -1,0 +1,58 @@
+section.page-hero.giving {
+  height: auto;
+  max-height: none;
+
+  .bg-image {
+    opacity: 1;
+  }
+
+  .right-content {
+    p {
+      font-family: $font-family-serif-light;
+
+      strong {
+        font-family: $font-family-serif-medium;
+        font-weight: normal;
+      }
+    }
+  }
+
+  a.external-link {
+    background: rgb(251, 255, 141);
+    background: linear-gradient(
+      49deg,
+      rgba(251, 255, 141, 1) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    @include font-size(1.75rem);
+    padding-left: 30px;
+    padding-right: 30px;
+    border: none;
+  }
+
+  @include media-breakpoint-up(xl) {
+    height: 100vh;
+    max-height: 800px;
+  }
+}
+
+section.giving-block-section {
+  h5 {
+    @include font-size(1.875rem);
+    border-bottom: 1px solid #b2e0e7;
+    padding-bottom: 10px;
+  }
+
+  p {
+    @include font-size(1.5rem);
+  }
+}
+
+section.giving-bottom {
+  h1 {
+    span {
+      color: #666897;
+    }
+  }
+}

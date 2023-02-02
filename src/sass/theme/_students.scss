@@ -1,0 +1,385 @@
+section.page-hero.students {
+  height: 100vh;
+  max-height: 700px;
+
+  .overlay {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 214, 159, 0.7) 45%,
+      rgba(247, 141, 247, 0.6) 100%
+    );
+  }
+}
+
+section.student-initiatives {
+  overflow: visible;
+  background-color: #eefbff;
+
+  .row {
+    overflow: visible;
+  }
+
+  p {
+    @include font-size(3rem);
+    padding-left: 1.1rem;
+  }
+
+  .images {
+    position: relative;
+    z-index: 3;
+
+    .image-box {
+      &.first-image {
+        margin-top: -100px;
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 10;
+  }
+
+  .overlay {
+    background-color: #eff6ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    opacity: 1;
+    z-index: 3;
+  }
+
+  .bottom-polygon {
+    position: absolute;
+    height: 60%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 1;
+    z-index: 3;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      225deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 186, 255, 0.19) 100%
+    );
+  }
+
+  @include media-breakpoint-up(md) {
+    .images {
+      position: relative;
+      z-index: 3;
+
+      .image-box {
+        &.first-image {
+          margin-top: -100px;
+        }
+
+        &.second-image {
+          margin-top: -50px;
+        }
+
+        &.third-image {
+          margin-left: -100px;
+        }
+      }
+    }
+
+    .bottom-polygon {
+      clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+      width: 95vw;
+    }
+  }
+}
+
+section.student-assembly {
+  background: rgb(248, 253, 255);
+  background: linear-gradient(
+    93deg,
+    rgba(248, 253, 255, 1) 0%,
+    rgba(237, 251, 255, 1) 50%
+  );
+
+  p {
+    @include font-size(3rem);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+section.students-slider {
+  background-color: #e3f8ff;
+
+  h3 {
+    @include font-size(1.875rem);
+    color: #5787af;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dff3fd;
+    font-family: $font-family-serif;
+  }
+
+  .images-slider {
+    margin: 0 -10px;
+
+    .image-box {
+      padding: 0 10px;
+
+      .image-container {
+        min-height: 300px;
+      }
+
+      .details {
+        padding: 5px 0;
+        @include font-size(1rem);
+        gap: 10px;
+
+        h6,
+        a {
+          @include font-size(1rem);
+          margin-bottom: 0;
+        }
+
+        a {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .polygon {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgb(242, 252, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(242, 252, 255, 1) 20%,
+      rgba(251, 254, 255, 1) 100%
+    );
+  }
+}
+
+section.students-third-block {
+  background-color: #eefbff;
+
+  p {
+    @include font-size(3rem);
+    margin-bottom: 2rem;
+    padding-left: 1.1rem;
+  }
+
+  .link-message {
+    @include font-size(1.875rem);
+  }
+
+  .title-container {
+    display: flex;
+    align-items: center;
+
+    .line {
+      flex: 1;
+      height: 1px;
+      background-color: #869198;
+    }
+  }
+
+  .students {
+    .image-container {
+      min-height: 375px;
+      margin-bottom: 6px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 6px;
+        background: rgb(92, 184, 232);
+        background: linear-gradient(
+          45deg,
+//          rgba(92, 184, 232, 1) 0%,
+//          rgba(52, 107, 255, 1) 100%
+          rgba(0, 127, 255, 1) 0%,
+          rgba(0, 207, 255, 1) 100%
+
+
+
+
+        );
+      }
+    }
+
+    h4 {
+      @include font-size(2.5rem);
+    }
+
+    h5 {
+      text-transform: uppercase;
+      @include font-size(1.1875rem);
+      font-family: $font-family-serif;
+      letter-spacing: 0.6px;
+      color: #003090;
+    }
+
+    h6 {
+      @include font-size(1rem);
+      font-family: $font-family-serif;
+      letter-spacing: 0.6px;
+      color: #44a5d0;
+      text-transform: none;
+      padding-top: 0.5rem;
+    }
+
+    a.bio-link {
+      border: 1px solid #0f125c;
+      padding: 15px 20px;
+      border-radius: 40px;
+      display: inline-flex;
+      align-items: center;
+      font-family: $font-family-serif-light;
+      font-size: 16px;
+      transition: $mytransition;
+
+      &:hover {
+        background-color: #44a5d0;
+        color: $secondary;
+      }
+    }
+  }
+
+
+
+  .container {
+    position: relative;
+    z-index: 4;
+  }
+
+  .polygon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 1;
+    z-index: 3;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 147, 255, 0.19) 100%
+    );
+  }
+
+  @include media-breakpoint-up(lg) {
+    .polygon {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+    }
+  }
+}
+
+section.students-awards {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(248, 253, 255, 1) 100%
+  );
+
+  .content-wrapper {
+    h3 {
+      @include font-size(2.813rem);
+      color: #0071e2;
+      border-bottom: 1px solid #d8e5f0;
+      padding-bottom: 10px;
+    }
+
+    p,
+    li {
+      @include font-size(1.875rem);
+    }
+
+    h5 {
+      color: #0025a0;
+      @include font-size(2.188rem);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .year-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    h3 {
+      @include font-size(5rem);
+      color: #b1ddff;
+      margin: 50px 0;
+    }
+
+    .line {
+      flex: 1;
+      height: 1px;
+      background-color: #93c5de;
+    }
+  }
+
+  .awards-list {
+    h5 {
+      color: #0025a0;
+      @include font-size(2.188rem);
+    }
+
+    p,
+    li {
+      @include font-size(1.875rem);
+    }
+
+    ul {
+      li {
+        padding: 10px;
+        display: block;
+        color: #41689d;
+
+        h5 {
+          border-bottom: 1px solid #d1e0f1;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.students-footer-cta {
+  .footer-cta-links {
+    background: rgb(176, 224, 240);
+    background: linear-gradient(
+      0deg,
+      rgba(176, 224, 240, 1) 0%,
+      rgba(238, 251, 255, 1) 100%
+    );
+  }
+}

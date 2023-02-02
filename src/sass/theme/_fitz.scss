@@ -1,0 +1,150 @@
+section.page-hero.fitz {
+  height: 100vh;
+  max-height: 700px;
+
+  .overlay {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      162deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 250, 229, 0.9) 50%,
+      rgba(167, 211, 255, 1) 85%
+    );
+    opacity: 0.78;
+  }
+
+  .bg-image {
+    opacity: 1;
+  }
+
+  h1 {
+    span {
+      color: #5b587a;
+    }
+  }
+}
+
+section.fitz-first-block {
+  background-color: #f5fcff;
+  overflow: visible;
+
+  .row {
+    overflow: visible;
+  }
+
+  .image-box {
+    &.first-image {
+      position: relative;
+      margin-top: -200px;
+      z-index: 3;
+    }
+
+    &.third-image {
+      position: absolute;
+      left: 440px;
+      top: 25%;
+      z-index: 3;
+    }
+  }
+
+  h3 {
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    font-family: $font-family-sans-serif;
+    @include font-size(2.063rem);
+    color: #0071e2;
+    border-bottom: 1px solid #d2d6e4;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    @include font-size(1.575rem);
+    padding: 5px 0 30px 20px;
+  }
+}
+
+section.fitz-second-block {
+  background: rgb(226, 253, 243);
+  background: linear-gradient(
+    90deg,
+    rgba(226, 253, 243, 1) 0%,
+    rgba(255, 254, 226, 1) 15%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 251, 154, 1) 100%
+  );
+
+  p {
+    font-family: $font-family-serif;
+    @include font-size(3.438rem);
+    color: #0025a0;
+  }
+
+  h5 {
+    margin-top: 40px;
+    @include font-size(1.875rem);
+    color: #62648d;
+
+    cite {
+      @include font-size(1rem);
+      font-family: $font-family-serif;
+    }
+  }
+}
+
+section.fitz-publications {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(232, 249, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 5%,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(232, 249, 255, 1) 100%
+  );
+
+  h3 {
+    color: #6c7cb2;
+  }
+
+  p {
+    color: #62648d;
+  }
+}
+
+section.fitz-legacy {
+  background: rgb(187, 238, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(187, 238, 255, 1) 0%,
+    rgba(236, 250, 255, 1) 40%,
+    rgba(232, 249, 255, 1) 100%
+  );
+
+  h3.block-title {
+    color: #6c7cb2;
+  }
+
+  .sections {
+    .section {
+      h3 {
+        @include font-size(3rem);
+        padding-bottom: 20px;
+        border-bottom: 1px solid #b9c4c6;
+        line-height: 50px;
+      }
+
+      p {
+        @include font-size(1.5rem);
+      }
+    }
+
+    .links {
+      a {
+        color: #0079c4;
+        @include font-size(1.5rem);
+      }
+    }
+  }
+}

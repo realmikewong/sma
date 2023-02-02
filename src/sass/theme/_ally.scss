@@ -1,0 +1,91 @@
+section.page-hero.ally {
+  h4 {
+    text-transform: uppercase;
+    font-family: $font-family-serif-light;
+    @include font-size(2.188rem);
+  }
+
+  h1 {
+    @include font-size(6.25rem);
+    color: #000af5;
+  }
+
+  p {
+    @include font-size(1.375rem);
+    font-family: $font-family-serif;
+    padding-bottom: 3rem;
+  }
+
+  a.external-link {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(15, 18, 92, 1) 100%
+    );
+    color: $white;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.16);
+    @include font-size(1.75rem);
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .bg-image {
+    opacity: 1;
+  }
+}
+
+section.ally-first-block {
+  background: rgb(240, 254, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(240, 254, 255, 1) 0%,
+    rgba(250, 255, 255, 1) 100%
+  );
+
+  h3.block-title {
+    color: #0079c4;
+    letter-spacing: 0.89px;
+    @include font-size(1.75rem);
+  }
+
+  .content-wrapper {
+    h3 {
+      @include font-size(2.5rem);
+      margin-bottom: 40px;
+    }
+
+    p,
+    li {
+      @include font-size(1.875rem);
+    }
+  }
+}
+
+section.allies-list {
+  .list-wrapper {
+    .ally {
+      .header {
+        border-top: 1px solid #d7d8e4;
+        border-bottom: 1px solid #d7d8e4;
+        padding: 10px 0;
+
+        h4 {
+          @include font-size(2.125rem);
+          color: #0079c4;
+          font-family: $headline-font;
+          max-width: 500px;
+          margin-bottom: 0;
+        }
+
+        a.external-link {
+          padding: 7px 12px;
+        }
+      }
+
+      p {
+        @include font-size(1.875rem);
+      }
+    }
+  }
+}

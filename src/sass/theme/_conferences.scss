@@ -1,0 +1,392 @@
+section.page-hero.conferences {
+  max-height: 800px;
+
+  a.btn-link {
+    text-transform: capitalize;
+    background: rgb(0, 99, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 99, 255, 1) 0%,
+      rgba(0, 226, 255, 1) 100%
+    );
+
+    img {
+      max-height: 30px;
+    }
+  }
+}
+
+section.upcoming-events {
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+  background-color: transparent;
+
+  h3.block-title {
+    @include font-size(1.25rem);
+    letter-spacing: 0.89px;
+    color: #7778a2;
+  }
+
+  .events-list {
+    .event {
+      padding: 40px 0;
+      background: rgb(203, 235, 255);
+      background: linear-gradient(
+        90deg,
+        rgba(203, 235, 255, 1) 0%,
+        rgba(228, 192, 254, 1) 100%
+      );
+      margin-bottom: 50px;
+      box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.16);
+      position: relative;
+
+      h6 {
+        @include font-size(1.125rem);
+      }
+
+      h3 {
+        @include font-size(2.5rem);
+        font-family: $font-family-serif-light;
+        color: #001ec1;
+      }
+
+      h5 {
+        @include font-size(1.625rem);
+        font-family: $font-family-serif-light;
+        color: #0f125c;
+      }
+
+      h4 {
+        @include font-size(2.188rem);
+        font-family: $font-family-serif-light;
+        color: #0071e2;
+        margin-bottom: 10px;
+      }
+
+      .right-content {
+        gap: 20px;
+
+        .btn {
+          color: #060095;
+          text-transform: capitalize;
+          font-family: $font-family-serif-medium;
+          background: rgb(255, 255, 255);
+          background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(226, 254, 255, 1) 100%
+          );
+        }
+
+        .external-link {
+          img {
+            max-width: 30px;
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background: rgb(25, 193, 255);
+        background: linear-gradient(
+          90deg,
+          rgba(25, 193, 255, 1) 0%,
+          rgba(205, 69, 255, 1) 100%
+        );
+      }
+
+      &:last-child {
+        background: rgb(229, 255, 188);
+        background: linear-gradient(
+          90deg,
+          rgba(229, 255, 188, 1) 0%,
+          rgba(255, 234, 178, 1) 100%
+        );
+        margin-bottom: 0;
+
+        &::after {
+          background: rgb(255, 220, 25);
+          background: linear-gradient(
+            90deg,
+            rgba(255, 220, 25, 1) 0%,
+            rgba(255, 155, 69, 1) 100%
+          );
+        }
+      }
+    }
+  }
+}
+
+section.conferences-page-break {
+  border-top: 2px solid #dcecff;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(163, 205, 242, 1) 100%
+  );
+
+  h3 {
+    @include font-size(1.25rem);
+    letter-spacing: 0.89px;
+    color: #7778a2;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 8px;
+    background: rgb(226, 222, 232);
+    background: linear-gradient(
+      90deg,
+      rgba(226, 222, 232, 1) 0%,
+      rgba(183, 212, 238, 1) 100%
+    );
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    height: 10px;
+    background: rgb(195, 222, 237);
+    background: linear-gradient(
+      90deg,
+      rgba(195, 222, 237, 1) 0%,
+      rgba(212, 255, 255, 1) 100%
+    );
+  }
+}
+
+section.conferences-slider {
+  background: rgb(210, 242, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(210, 242, 255, 1) 0%,
+    rgba(238, 251, 255, 1) 100%
+  );
+
+  .images-slider {
+    margin: 0 -10px;
+
+    .image-box {
+      padding: 0 10px;
+
+      .image-container {
+        min-height: 300px;
+      }
+
+      .details {
+        padding: 5px 0;
+        @include font-size(1rem);
+        gap: 10px;
+
+        h6,
+        a {
+          @include font-size(1rem);
+          margin-bottom: 0;
+        }
+
+        a {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+
+section.past-conferences {
+  background: rgb(235, 250, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(235, 250, 255, 1) 0%,
+    rgba(238, 251, 255, 1) 100%
+  );
+
+  h3.block-title {
+    text-align: center;
+  }
+
+  .content-wrapper {
+    p {
+      @include font-size(3.125rem);
+    }
+  }
+}
+
+section.conferences-scholarship {
+  background: rgb(235, 250, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(235, 250, 255, 1) 0%,
+    rgba(221, 246, 255, 1) 100%
+  );
+  overflow: visible;
+
+  .content-wrapper {
+    p {
+      @include font-size(3.125rem);
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .list-wrapper {
+    h3 {
+      @include font-size(3.125rem);
+      position: relative;
+      margin-bottom: 30px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        height: 1px;
+        background-color: #e1e5ef;
+        width: 50%;
+      }
+    }
+
+    ul {
+      column-count: 2;
+      list-style: none;
+      gap: 40px;
+
+      li {
+        @include font-size(1.875rem);
+        padding: 10px 0;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #e1e5ef;
+      }
+    }
+
+    p {
+      color: #5d74e3;
+    }
+  }
+
+  .polygon {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 1;
+    background: rgb(239, 250, 255);
+    background: linear-gradient(
+      153deg,
+      rgba(239, 250, 255, 1) 0%,
+      rgba(176, 216, 255, 1) 100%
+    );
+  }
+
+  @include media-breakpoint-up(xl) {
+    .polygon {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 6% 100%);
+    }
+  }
+}
+
+section.past-conferences-list {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 20%,
+    rgba(233, 245, 255, 1) 46%,
+    rgba(255, 255, 255, 1) 80%,
+    rgba(245, 244, 254, 1) 100%
+  );
+
+  .header {
+    gap: 40px;
+
+    img {
+      max-width: 1000px;
+    }
+
+    .title-container {
+      p {
+        font-family: $font-family-serif;
+        color: #8e8eb3;
+      }
+    }
+  }
+}
+
+section.past-conferences-list {
+  .past-event {
+    .event {
+      p {
+        @include font-size(1.875rem);
+      }
+
+      .year {
+        color: #a6d9ff;
+        @include font-size(5rem);
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          height: 1px;
+          background-color: #add2e6;
+          width: 80%;
+        }
+      }
+
+      .title {
+        @include font-size(3.76rem);
+      }
+
+      .info-block {
+        padding: 20px 0;
+
+        .info-title {
+          position: relative;
+          @include font-size(1.875rem);
+          max-width: 150px;
+        }
+
+        .info-content {
+          padding-top: 20px;
+          border-top: 1px solid #add2e6;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .past-event {
+      .event {
+        .info-block {
+          padding: 40px 0;
+        }
+
+        .info-content {
+          padding-top: 40px;
+          margin-left: 200px;
+          border-top: 1px solid #add2e6;
+          margin-top: -20px;
+        }
+      }
+    }
+  }
+}
