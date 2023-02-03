@@ -18461,6 +18461,10 @@ section.blog-article h1, section.blog-article .h1 {
   margin-bottom: 30px;
 }
 
+section.blog-article a, section.blog-article .a{
+	color: #0012a3;
+}
+
 @media (min-width: 1200px) {
   section.blog-article h1, section.blog-article .h1 {
     font-size: 3.125rem;

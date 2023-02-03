@@ -16662,7 +16662,6 @@ SINGLE BLOG POST
   font-family: "action_sansregular", sans-serif;
   max-width: 900px;
   padding: 4% 6%;
-  padding-bottom: 100px;
   z-index: 100;
   margin: 0 auto;
   margin-top: -200px;
@@ -16764,6 +16763,13 @@ section.blog-hero.dark .details {
 
 h1.blog-hero.dark, .blog-hero.dark.h1 {
   color: #fff;
+}
+
+section.blog-article.initiative {
+  font-family: "action_sansregular", sans-serif;
+  position: relative;
+  background: rgb(255, 255, 255);
+  padding-top: 0;
 }
 
 section.blog-article {

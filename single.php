@@ -50,6 +50,18 @@ $hero_background_image = get_field('hero_background_image'); /** used if the pos
 </style>
 
 <!-- this sets a variable to be used in a class below to set light or dark text and light or dark social icons in the hero section -->
+
+<?php
+  if(get_field('post_type', $post_id) == 'initiative')
+    {
+      $articleBkgd = "blog-article initiative";
+    }
+  elseif(get_field('post_type', $post_id) == 'regular')
+    {
+      $articleBkgd = "blog-article";
+    }
+?>
+
 <?php
   if($header_text_color == "light")
     {
@@ -69,7 +81,7 @@ $hero_background_image = get_field('hero_background_image'); /** used if the pos
 
 <?php if(get_field('post_type', $post_id) == 'initiative') { ?> <!-- If the post is type Initiative, show this section -->
    
-    <section class="blog-article page-hero <?php echo $textColor; ?>"> <!-- <section class="blog-hero dark" or "blog-hero light" -->
+    <section class="<?php echo $articleBkgd; ?> page-hero <?php echo $textColor; ?>"> <!-- <section class="blog-hero dark" or "blog-hero light" -->
 
     <div class="<?php echo esc_attr( $container ); ?> max-900">
 
@@ -116,17 +128,13 @@ $hero_background_image = get_field('hero_background_image'); /** used if the pos
     </div>
 
     <div class="bg-image cover" style="background-image: url(<?php echo esc_url($hero_background_image['sizes']['widescreen']); ?>);"></div>
-
   </section>
 <?php } ?>
 
 <!-- mini header -->
-    <?php if(get_field('post_type', $post_id) == 'initiative') { ?>
-      <div class="mini-header"><p><?php echo $mini_header_content; ?></div></p> 
-    <?php } ?>
 
-  <section class="blog-article">
-
+  <?php if(get_field('post_type', $post_id) == 'initiative') { ?><div class="mini-header"><p><?php echo $mini_header_content; ?></div></p><?php } ?>-
+  <section class="<?php echo $articleBkgd; ?>">
     <div class="<?php echo esc_attr( $container ); ?> max-900">
       <div class="row">
         <div class="col-12 ">
