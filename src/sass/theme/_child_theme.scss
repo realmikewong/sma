@@ -1167,12 +1167,26 @@ FOOTER
   
   .gw-logo {
     img {
-      max-width: 185px;
+      //max-width: 150px;
+      max-height: 100px;
+      width: auto;
+      display: block;
+      
+    }
+  }
+
+  .gwu-logo {
+    img {
+      max-height: 100px;
+      width: auto;
+      display: block;
     }
   }
   
   .gw-text{
   	  text-align: right;
+      padding-left: 10px;
+      padding-right: 20px;
   	  font-family: "action_sansregular";
   }
 

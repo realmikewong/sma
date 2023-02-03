@@ -78,15 +78,20 @@ $terms_of_use = get_field('terms_of_use', 'option');
 			</footer>
 		</div>
 
-<div class="container d-flex align-items-right justify-content-end footer-bottom">
-	<div class="row">
-		<div class="col-12 d-flex align-items-right justify-content-end" style="padding:20px" >
-			<p>Social Mission Alliance is a joint activity with the Mullan Institute and George Washington University.</br><a href="https://www.gwhwi.org">Learn more about the Mullan Institute here.</a></p>		
-			<a href="https://www.gwhwi.org"><img src="<?php echo get_stylesheet_directory_uri() . '/images/gw_ci_fmihwe_2c.png' ?>" style="max-width: 50vw; max-height: 100px; padding-left: 20px" alt="Fitzhugh Mullan Institute for Health and Workforce Equity" /></a>
-	<a href="https://www.gwu.edu/"><img src="http://socialmission.org/wp-content/uploads/2023/01/GW-logo.png" style="max-width: 50vw; max-height: 100px; padding-left: 20px" alt="George Washington University" /></a>
-		</div>
-	</div>
-</div>
+		<div class="container pt-4" id="gw-footer">
+					<div class="row">
+						<div class="col-md-4 col-1"></div>
+						<div class="col-md-4 col-11 gw-text">
+							<p class="gw-text">Social Mission Alliance is a joint activity with the Mullan Institute and George Washington University. <a href="https://www.gwhwi.org">Learn more about the Mullan Institute here.</a></p>
+						</div>
+						<div class="col-md-2 col-6 gw-logo" style="border-left: solid 1px #D6D6D6;">
+							<a href="https://www.gwhwi.org"><img src="<?php echo get_stylesheet_directory_uri() . '/images/gw_ci_fmihwe_2c.png' ?>" alt="Fitzhugh Mullan Institute for Health and Workforce Equity" /></a>
+						</div>
+						<div class="col-md-2 col-6 gwu-logo">
+							<a href="https://www.gwu.edu/"><img src="http://socialmission.org/wp-content/uploads/2023/02/GW-logo-350px.png" alt="George Washington University" /></a>
+						</div>
+					</div>
+				</div>
 
 <?php wp_footer(); ?>
 
