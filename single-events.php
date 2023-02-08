@@ -112,6 +112,7 @@ a.external-link:hover {
 .image-box .details {
     padding: 20px 0;
 }
+
 </style>
 
 <div class="wrapper" id="full-width-page-wrapper" style="margin-top: 113px;">
@@ -226,12 +227,109 @@ a.external-link:hover {
   <?php endif; ?>
 
 
-  
+
+<!-- Tabs navs -->
 
 
 
   <!-- Event Agenda -->
-  
+
+  <section class="event-agenda" id="">
+  <div class="col-12">
+      <div class="title-container ms-lg-4 mb-2 mb-lg-4 mt-2 mt-lg-4">
+        <h2 class="max-500" style="font-family: action_sansregular;font-size: 37px;margin-left: 55px;">EVENT AGENDA</h2>
+      </div>
+  </div>
+
+ <?php
+    if(have_rows('event_agenda')):
+      while( have_rows('event_agenda')) : the_row();
+      // get parent value
+      $event_day = get_sub_field('event_day');
+
+      // loop over sub repeater rows
+      if(have_rows('agenda_details')):
+        while(have_rows('agenda_details')) : the_row();
+
+          // get sub value
+          $agenda_item_location = get_sub_field('agenda_item_location');
+          $agenda_item_time = get_sub_field('agenda_item_time');
+          $agenda_item_name = get_sub_field('agenda_item_name');
+          $agenda_item_subtitle = get_sub_field('agenda_item_subtitle');
+          $agenda_item_description = get_sub_field('agenda_item_description');
+          $agenda_item_speakers = get_sub_field('agenda_item_speakers');
+          $agenda_item_image = get_sub_field('agenda_item_image');
+          $agenda_item_video = get_sub_field('agenda_item_video');
+          $agenda_item_register = get_sub_field('agenda_item_register_now');
+          $agenda_item_learn_more = get_sub_field('agenda_item_learn_more');
+
+        endwhile;
+      endif;
+    endwhile;
+  endif; ?>
+
+<div class="col-md-3 ms-5 mb-2"> <!-- begin div for daily agenda details -->
+
+<?php // check for rows (parent repeater)
+  if( have_rows('event_agenda')): ?>
+  <div id="days">
+    <?php // loop through rows (parent repeater)
+      while( have_rows('event_agenda')): the_row(); ?>
+      <div>
+        <h3><?php the_sub_field('event_day'); ?></h3> <!-- this works to show all the days -->
+        
+        <?php // check for rows (sub repeater)
+          if( have_rows('agenda_details')): ?>
+            <?php  // loop through rows (sub repeater)
+              while( have_rows('agenda_details')): the_row();
+              $agenda_item_location = get_sub_field('agenda_item_location');
+              $agenda_item_time = get_sub_field('agenda_item_time');
+              $agenda_item_name = get_sub_field('agenda_item_name');
+              $agenda_item_subtitle = get_sub_field('agenda_item_subtitle');
+              $agenda_item_description = get_sub_field('agenda_item_description');
+              $agenda_item_image = get_sub_field('agenda_item_image');
+              $agenda_item_video = get_sub_field('agenda_item_video');
+              $agenda_item_register_now = get_sub_field('agenda_item_register_now');
+              $agenda_item_learn_more = get_sub_field('agenda_item_learn_more');
+            ?>
+                <div class="row">
+                  <div class="col-md-6 ps-2 agenda-location"><p><?php echo $agenda_item_location; ?></p></div>
+                  <div class="col-md-6 agenda-time"><p><?php echo $agenda_item_time; ?></p></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 ps-2 agenda-title"><h5><?php echo $agenda_item_name; ?></h5></div>
+                  <div class="col-md-8 ps-2 agenda-subtitle"><p><?php echo $agenda_item_subtitle; ?></p></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 ps-2 agenda-description"><p><?php echo $agenda_item_description; ?></p></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3 ps-2 agenda-speakers"><p>Speakers</p></div>
+                </div>
+
+                
+                
+
+
+        <?php endwhile; ?>
+        <?php endif; //if(get_sub_field('agenda_details')): ?>
+    </div>
+    <?php endwhile; // while( has_sub_field('event_agenda')): ?>
+    </div>
+    <?php endif; // if(get_field('event_agenda')): ?>
+
+
+
+</div> <!-- end of the div for the daily agenda details -->
+
+
+
+
+  </section>
+
+
+
+  <!-- original code remove this later
   <section class="event-agenda" id="">
     <div class="col-12">
       <div class="title-container ms-lg-4 mb-2 mb-lg-4 mt-2 mt-lg-4">
@@ -265,8 +363,7 @@ a.external-link:hover {
       <?php endif; ?>
     </div>
   </section>
-
-
+      -->
 
 
 
