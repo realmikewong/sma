@@ -390,3 +390,84 @@ section.past-conferences-list {
     }
   }
 }
+
+/******************************************************/
+/******************************************************/
+/* THE CSS FOR THE SINGLE-EVENTS.PHP PAGE STARTS HERE */
+/******************************************************/
+/******************************************************/
+
+
+
+.speaker-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+section.events-slider {
+	background-color: #fff;
+  
+	h3 {
+	  @include font-size(1.875rem);
+	  color: #5787af;
+	  padding-bottom: 10px;
+	  border-bottom: 1px solid #dff3fd;
+	  font-family: $font-family-serif;
+	}
+
+  
+	.images-slider {
+	  margin: 0 -10px;
+  
+	  .image-box {
+		padding: 0 10px;
+  
+		.image-container {
+		  min-height: 300px;
+		}
+  
+		.details {
+		  padding: 5px 0;
+		  @include font-size(1rem);
+		  gap: 10px;
+  
+		  h6,
+		  a {
+			@include font-size(1rem);
+			margin-bottom: 0;
+		  }
+
+		  a {
+			text-transform: capitalize;
+		  }
+		}
+	  }
+	}
+  
+	.container {
+	  position: relative;
+	  z-index: 2;
+	}
+	
+  }
+
+  section.event-agenda {
+    h4.event-agenda {
+      color: #0025A0;
+      font-family: $font-family-serif;
+      font-size: 80px;
+      border-bottom: #0f125c 10px;
+      font-weight: 500;
+    }
+  }
+  
+  section.agenda-info {
+    .location {
+      p {
+        font-family: $font-family-serif;
+        font-size: 28px;
+        color: #00ada7;
+      }
+    }
+  }

@@ -37,16 +37,35 @@ $colorClasses = ['teal', 'red-orange', 'blue-purple', 'pink', 'teal-white'];
 
 
 <style type="text/css">
+
+
 h1 {
   color: #0F125C;font-family: action_sanslight;
   white-space: nowrap;
 }
+
+h2 {
+  font-family: action_sanslight;
+}
+
 h3 {
   color: #0025A0;font-family: action_sanslight;font-size: 35px;
 }
+
+h4 {
+		color: #0025A0;
+		font-family: $font-family-serif;
+		font-size: 28px;
+	}
+
+
 h5 {
-  color: #0025A0;font-family: action_sansregular;font-size: 20px;margin-bottom: 0;
+  color: #0025A0;
+  font-family: action_sanslight;
+  font-size: 20px;
 }
+
+
 #hero-content {
   background: radial-gradient(circle, #FFFFFF, #CBEBFF, #E5C1FF);
   padding: 3.75rem 0;
@@ -113,6 +132,11 @@ a.external-link:hover {
     padding: 20px 0;
 }
 
+
+
+
+
+
 </style>
 
 <div class="wrapper" id="full-width-page-wrapper" style="margin-top: 113px;">
@@ -129,9 +153,9 @@ a.external-link:hover {
           <h3 class="ms-3 mb-3"><?php echo $event_hero_date; ?></h3>
         
           <!-- hero cta buttons and short description -->
-          <a class="external-link ms-3 mt-2" href="?php echo esc_url($event_hero_registration_link); ?>" target="_blank"><img class="pe-1" src="/wp-content/themes/sma/images/external-link-icon.svg" alt="Register now">Register Now</a>
+          <a class="external-link ms-3 mt-2" href="<?php echo esc_url($event_hero_registration_link); ?>" target="_blank"><img class="pe-1" src="/wp-content/themes/sma/images/external-link-icon.svg" alt="Register now">Register Now</a>
 
-          <a class="external-link ms-3 mt-2" href="?php echo esc_url($event_hero_site_link); ?>" target="_blank"><img class="pe-1" src="/wp-content/themes/sma/images/external-link-icon.svg" alt="Register now">Event Site</a>
+          <a class="external-link ms-3 mt-2" href="<?php echo esc_url($event_hero_site_link); ?>" target="_blank"><img class="pe-1" src="/wp-content/themes/sma/images/external-link-icon.svg" alt="Register now">Event Site</a>
 
           <p class="mt-4 ms-3 mb-3" style="color: #0F125C;font-family: action_sansregular;font-size: 28px;"><?php echo $event_hero_short_description; ?></p>
         </div>
@@ -194,7 +218,7 @@ a.external-link:hover {
 
   <!-- Events Slider -->
   <?php if( have_rows('events_slider') ): ?>
-  <section class="student-slider" id="slider"> <!-- Traci - I think this has something to do with the images not appearing
+  <section class="events-slider" id="slider"> <!-- Traci - I think this has something to do with the images not appearing
                                                     Mike - I haven't figured out the issue yet but I did declare the slider in the head above -->
     <div class="<?php echo esc_attr( $container ); ?> max-1400">
       <div class="row">
@@ -226,15 +250,9 @@ a.external-link:hover {
   </section>
   <?php endif; ?>
 
-
-
-<!-- Tabs navs -->
-
-
-
   <!-- Event Agenda -->
 
-  <section class="event-agenda" id="">
+  <section id=""> <!-- I think there needs to be a class on this section so we can target the css -->
   <div class="col-12">
       <div class="title-container ms-lg-4 mb-2 mb-lg-4 mt-2 mt-lg-4">
         <h2 class="max-500" style="font-family: action_sansregular;font-size: 37px;margin-left: 55px;">EVENT AGENDA</h2>
@@ -268,7 +286,7 @@ a.external-link:hover {
     endwhile;
   endif; ?>
 
-<div class="col-md-3 ms-5 mb-2"> <!-- begin div for daily agenda details -->
+<div class="col-md-9 ps-5 mb-2"> <!-- begin div for daily agenda details -->
 
 <?php // check for rows (parent repeater)
   if( have_rows('event_agenda')): ?>
@@ -276,6 +294,7 @@ a.external-link:hover {
     <?php // loop through rows (parent repeater)
       while( have_rows('event_agenda')): the_row(); ?>
       <div>
+        
         <h3><?php the_sub_field('event_day'); ?></h3> <!-- this works to show all the days -->
         
         <?php // check for rows (sub repeater)
@@ -291,26 +310,50 @@ a.external-link:hover {
               $agenda_item_video = get_sub_field('agenda_item_video');
               $agenda_item_register_now = get_sub_field('agenda_item_register_now');
               $agenda_item_learn_more = get_sub_field('agenda_item_learn_more');
+              $agenda_item_image = get_sub_field('agenda_item_image');
             ?>
-                <div class="row">
-                  <div class="col-md-6 ps-2 agenda-location"><p><?php echo $agenda_item_location; ?></p></div>
-                  <div class="col-md-6 agenda-time"><p><?php echo $agenda_item_time; ?></p></div>
-                </div>
-                <div class="row">
-                  <div class="col-md-8 ps-2 agenda-title"><h5><?php echo $agenda_item_name; ?></h5></div>
-                  <div class="col-md-8 ps-2 agenda-subtitle"><p><?php echo $agenda_item_subtitle; ?></p></div>
-                </div>
-                <div class="row">
-                  <div class="col-md-8 ps-2 agenda-description"><p><?php echo $agenda_item_description; ?></p></div>
-                </div>
-                <div class="row">
-                  <div class="col-md-3 ps-2 agenda-speakers"><p>Speakers</p></div>
-                </div>
-
                 
+                <div class="row pt-3">
+                  <div class="col-md-6 ps-2"><img class="pe-1" src="https://socialmission.org/wp-content/uploads/2023/02/map-pin-svgrepo-com.svg" alt style="width:30px;height:30px"><p><?php echo $agenda_item_location; ?></p></div>
+                  <div class="col-md-6"><img class="pe-1" src="https://socialmission.org/wp-content/uploads/2023/02/clock-1-svgrepo-com.svg" alt style="width:30px;height:30px"><p><?php echo $agenda_item_time; ?></p></div>
+                </div>
+                <div class="row pt-1">
+                  <div class="col-md-8 ps-2"><h4><?php echo $agenda_item_name; ?></h4></div>
+                  <div class="col-md-8 ps-2"><h5><?php echo $agenda_item_subtitle; ?></h5></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-8 ps-2"><p><?php echo $agenda_item_description; ?></p></div>
+                  <div class="col-md-4"><img src="<?php echo esc_url($agenda_item_image['url']); ?>" alt="<?php echo esc_attr($agenda_item_image['alt']); ?>"></div>
+                </div>
                 
+                <div class="row">
+                  <div class="col-md-7 ps-2 pt-3"><h5>Speakers</h5></div>
+                </div>
+              
+                <div class="container event-speaker">
+                  <div class="row">
+                    <?php // check for speaker rows (sub-sub repeater)
+                       if( have_rows('agenda_item_speakers')): ?>
+                        <?php // loop through speaker rows (sub-sub repeater)
+                          while( have_rows('agenda_item_speakers')): the_row();
+                          $speaker_name = get_sub_field('speaker_name');
+                          $speaker_organization = get_sub_field('speaker_organization');
+                          $speaker_photo = get_sub_field('speaker_photo');
+                        ?>
+                        <div class="col-md-2">
+                          <img class="speaker-img" src="<?php echo esc_url($speaker_photo['url']); ?>" alt="<?php echo esc_attr($speaker_photo['alt']); ?>">
+                          <p><?php echo $speaker_name; ?></br>
+                          <?php echo $speaker_organization; ?></p>
+                        </div> <!-- closes the column -->
+                          <?php endwhile; // finishes the loop getting agenda item speakers?> 
+                          <?php endif; //if(get_sub_field('agenda_item_speakers')): ?>
+                        <div class="col-md-4">
+                          <div class="row"><div class="cta-button blue pb-3 mt-3 text-center"><a href="<?php echo $agenda_item_register_now['url']; ?>" target="_blank"><?php echo $agenda_item_register_now['title']; ?></a></div></div>
+                          <div class="row"><div class="cta-button blue pb-3 mt-3 text-center"><a href="<?php echo $agenda_item_learn_more['url']; ?>" target="_blank"><?php echo $agenda_item_learn_more['title']; ?></a></div></div>
+                        </div>
+                  </div> <!-- closes the row -->
 
-
+                </div>
         <?php endwhile; ?>
         <?php endif; //if(get_sub_field('agenda_details')): ?>
     </div>
@@ -318,57 +361,9 @@ a.external-link:hover {
     </div>
     <?php endif; // if(get_field('event_agenda')): ?>
 
-
-
-</div> <!-- end of the div for the daily agenda details -->
-
-
-
+    </div> <!-- end of the div for the daily agenda details -->
 
   </section>
-
-
-
-  <!-- original code remove this later
-  <section class="event-agenda" id="">
-    <div class="col-12">
-      <div class="title-container ms-lg-4 mb-2 mb-lg-4 mt-2 mt-lg-4">
-        <h2 class="max-500" style="font-family: action_sansregular;font-size: 37px;margin-left: 55px;">EVENT AGENDA</h2>
-      </div>
-      <?php if( have_rows('event_agenda') ): ?>
-      <div class="students max-1200 ms-auto me-auto">
-        <div class="row">
-        <?php while( have_rows('event_agenda') ): the_row(); 
-          $location = get_sub_field('agenda_item_location');
-          $time = get_sub_field('agenda_item_time');
-          $name = get_sub_field('agenda_item_name');
-          $subtitle = get_sub_field('agenda_item_subtitle');
-          $description = get_sub_field('agenda_item_description');
-          $speakers = get_sub_field('agenda_item_speakers');
-          $image = get_sub_field('agenda_item_image');
-          $video = get_sub_field('agenda_item_video');
-          $regbutton = get_sub_field('agenda_item_register_now');
-          $morebutton = get_sub_field('agenda_item_learn_more');
-        ?>
-          <div class="col-md-3 mb-2" style="text-align: center;">
-            <div class="image-container bg-image cover" style="background-image: url(<?php echo $image['url']; ?>);"></div>
-            <h4 class="mt-2" style="font-size: 1.5rem;margin-bottom: 0;text-transform: uppercase;"><?php echo $name; ?></h4>
-            <h5 class="mb-0" style="font-size: 1rem;"><?php echo $subtitle; ?></h5>
-            <p><?php echo $name; ?></p>
-            <p><?php echo $description; ?></p>
-          </div>
-        <?php endwhile; ?>
-        </div>
-      </div>
-      <?php endif; ?>
-    </div>
-  </section>
-      -->
-
-
-
-
-
 
   <!-- Key Speakers -->
   <section class="students-third-block" id="sectionThree">
@@ -397,20 +392,43 @@ a.external-link:hover {
     </div>
   </section>
 
-<!-- News Feed -->
-<!-- We'll use the Juicer WordPress plug-in -->
-<!-- Need to create a custom field for the Juicer feed for each event and then place that into this template using a shortcode -->
+  <!-- News Feed -->
+  <!-- We'll use the Juicer WordPress plug-in -->
+  <!-- Need to create a custom field for the Juicer feed for each event and then place that into this template using a shortcode -->
+  <!-- replace the sassy social share with the juicer info -->
+  <!--  <div data-aos="fade-in"><?php echo do_shortcode('[Sassy_Social_Share]'); ?></div> -->
 
-	<!-- replace the sassy social share with the juicer info -->
+  <!-- bottom banner section -->
+  <section class=""> <!-- this needs a class that will give the blue background. Can't use the student one b/c it mess up the font styles -->
+        <div class="row">
+          <div class="col-md-6 ps-4">
+            
+          <h5 class="ms-3">Hosted by: <?php echo $event_hero_hosted_by; ?></h5></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 ps-4"><h2 class="ms-3 mb-1"><?php echo $event_hero_name; ?></h2></div>
+          <div class="col-md-2">
+            <a class="external-link ms-3 mt-2" href="<?php echo esc_url($event_hero_registration_link); ?>" target="_blank"><img class="pe-1" src="/wp-content/themes/sma/images/external-link-icon.svg" alt="Register now">Register Now</a>
 
-  <div data-aos="fade-in"><?php echo do_shortcode('[Sassy_Social_Share]'); ?></div>
+           <a class="external-link ms-3 mt-2" href="<?php echo esc_url($event_hero_site_link); ?>" target="_blank"><img class="pe-1" src="/wp-content/themes/sma/images/external-link-icon.svg" alt="Register now">Event Site</a>
+           <p><img class="pe-1" src="/wp-content/themes/sma/images/icon-arrow-right.svg"><a href="/conferences/">More events</a></p>
+          </div>
+        </div>
+        <div class="row col-md-6 ps-4">
+          <h3 class="ms-2 mb-3"><?php echo $event_hero_subtitle; ?></h3>
+        </div>
+        <div class="row col-md-6 ps-4">
+          <h3 class="ms-2 mb-3"><?php echo $event_hero_date; ?></h3>
+        </div>
+
+  </section>
+
+  <!-- bottom banner section -->
+  <div class="join-footer-cta">
+    <?php get_template_part('loop-templates/partials/footer-cta-links'); ?>
+  </div>
 
 </div> <!-- full-width-page-wrapper -->
-
-
-
-
-
 
 <?php
 get_footer();

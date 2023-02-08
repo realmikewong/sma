@@ -30,6 +30,8 @@ $banner_content = get_field('banner_content', 'option');
 
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+	<script src="https://kit.fontawesome.com/f4ed3bad52.js" crossorigin="anonymous"></script>
+
 	<?php if($gaCode): ?>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=<?php echo $gaCode; ?>"></script>
