@@ -542,6 +542,12 @@ GLOBAL CLASSES
 Buttons
 *******/
 
+a.external-link.trans-white {
+  background: transparent;
+  border: solid 1px #fff;
+  color: #fff;
+}
+
 .btn {
   border-radius: 25px;
   border: none;
@@ -686,6 +692,14 @@ a.internal-link {
         rgba(0, 143, 219, 1) 0%,
         rgba(46, 208, 247, 1) 100%
       );
+    }
+  }
+
+  &.tb { //transparent button
+    a {
+      background: transparent;
+      border: 1px solid #0F125C;
+      color: #0f125c;
     }
   }
 
