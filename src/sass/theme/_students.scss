@@ -213,14 +213,10 @@ section.students-third-block {
         background: rgb(92, 184, 232);
         background: linear-gradient(
           45deg,
-//          rgba(92, 184, 232, 1) 0%,
-//          rgba(52, 107, 255, 1) 100%
+          /* rgba(92, 184, 232, 1) 0%, */
+          /* rgba(52, 107, 255, 1) 100% */
           rgba(0, 127, 255, 1) 0%,
           rgba(0, 207, 255, 1) 100%
-
-
-
-
         );
       }
     }
@@ -262,8 +258,6 @@ section.students-third-block {
       }
     }
   }
-
-
 
   .container {
     position: relative;

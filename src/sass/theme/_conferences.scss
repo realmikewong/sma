@@ -124,6 +124,11 @@ section.upcoming-events {
   }
 }
 
+.more a {
+  color: #fff;
+  font-family: $font-family-serif;
+}
+
 section.conferences-page-break {
   border-top: 2px solid #dcecff;
   background: rgb(255, 255, 255);
@@ -397,13 +402,14 @@ section.past-conferences-list {
 /******************************************************/
 /******************************************************/
 
-
-
 .speaker-img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-}
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  }
 
 section.events-slider {
 	background-color: #fff;
@@ -416,7 +422,7 @@ section.events-slider {
 	  font-family: $font-family-serif;
 	}
 
-  
+
 	.images-slider {
 	  margin: 0 -10px;
   
@@ -453,21 +459,278 @@ section.events-slider {
   }
 
   section.event-agenda {
+
+    margin: 0;
+    padding: 0;
+    background-color: #F0FCFF;
+
+    .agenda-border {
+      border: solid 1px #CBD6E4;
+    }
+
+    h6.agenda-info {
+      font-family: $font-family-serif;
+      font-size: 15px;
+      color: #00ada7;
+      margin: 0;
+    }
+
+    
+    h5.agenda-desc {
+      font-family: $font-family-serif;
+      font-size: 18px;
+    }
+
+    h2.event-agenda {
+      font-family: $font-family-serif;
+      font-size: 35px;
+      text-align: center;
+    }
+    
     h4.event-agenda {
       color: #0025A0;
       font-family: $font-family-serif;
-      font-size: 80px;
-      border-bottom: #0f125c 10px;
+      font-size: 28px;
       font-weight: 500;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #80ACFF;
     }
+
+    h5.event-agenda {
+      border-bottom: #0f125c 1px;
+      font-family: $font-family-serif;
+      font-size: 20px;
+      color: #0025A0;
+    }
+
+    h5.event-agenda-speakers {
+      border-bottom: #0f125c 1px;
+      font-family: $font-family-serif;
+      font-size: 20px;
+      color: #0025A0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #80ACFF;
+    }
+
+    h6.event-agenda-speaker {
+      font-family: $font-family-serif;
+      text-transform: none;
+      color: #0025A0;
+      font-size: 16px;
+      text-align: center;
+      padding-top: 10px;
+    }
+    
+    h6.event-agenda-org {
+      color: #0025A0;
+      font-family: $font-family-serif;
+      font-size: 14px;
+      text-transform: capitalize;
+      text-align: center;
+    }
+
   }
   
-  section.agenda-info {
-    .location {
-      p {
-        font-family: $font-family-serif;
-        font-size: 28px;
-        color: #00ada7;
-      }
+  
+
+h1 {
+  color: #0F125C;font-family: action_sanslight;
+  white-space: nowrap;
+}
+
+ h2 {
+  font-family: action_sanslight;
+}
+
+h3 {
+  color: #0025A0;font-family: action_sanslight;font-size: 35px;
+}
+
+h4 {
+    color: #0025A0;
+    font-family: $font-family-serif;
+    font-size: 28px;
+  }
+
+
+//h5 {
+  //color: #0025A0;
+  //font-family: action_sanslight;
+  //font-size: 20px;
+//}
+
+
+#hero-content {
+  background: radial-gradient(circle, #FFFFFF, #CBEBFF, #E5C1FF);
+  padding: 3.75rem 0;
+  position: relative;
+}
+
+h5.hosted-by {
+  text-transform: uppercase;
+  @include font-size(1.1875rem);
+  font-family: $font-family-serif;
+  letter-spacing: 0.6px;
+  color: #003090;
+  white-space: nowrap;
+}
+
+.hero-bg-image {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .25;
+  z-index: 1;
+}
+.hero-bg-image.cover {
+  background-size: cover;
+}
+.image-container .img-1 {
+  position: relative;
+  top: 50px;
+  left: 275px;
+  width: 279px;
+}
+a.external-link:hover {
+  background-color: #fff;
+  color: #0f125c;
+}
+.about-event {
+  top: -22px;
+  position: relative;
+}
+.about-event .details {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #def6fe;
+  -webkit-clip-path: polygon(0 0,100% 0,80% 100%,0% 100%);
+  clip-path: polygon(0 0,100% 0,80% 100%,0% 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(255, 255, 255) 0%,
+    rgb(222, 246, 254) 50%
+  );
+  z-index: 10;
+}
+.about-event .details p {
+  color: #0F125C;
+  font-family: action_sanslight;
+  font-size: 25px;width: 75%;
+}
+.slick-slide {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.image-box .details a {
+  text-transform: capitalize;
+}
+.image-box .details {
+    padding: 20px 0;
+}
+
+.future {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0,23,155);
+  background: linear-gradient(90deg, rgba(0,23,155,1) 20%, rgba(121,0,209,1) 91%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 9% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 9% 100%);
+}
+.future h5 {
+  color: #FFF476;
+  margin-bottom: 0;
+}
+.future h2 {
+  color: #fff;
+}
+.future h3 {
+  color: #fff;
+  text-align: right;
+}
+.future h4 {
+  color: #FFF476;
+  margin-bottom: 0 !important;
+}
+
+section.events-key-speakers {
+  background-color: #fff;
+
+  p {
+    @include font-size(3rem);
+    margin-bottom: 2rem;
+    padding-left: 1.1rem;
+  }
+
+  h2.key-speakers {
+    font-family: $font-family-serif;
+    font-size: 32px;
+  }
+
+  h4.key-speakers {
+    font-size: 24px !important;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
+
+  h5.key-speakers {
+    font-size: 16px !important;
+    padding-top: 5px;
+  }
+
+  .link-message {
+    @include font-size(1.875rem);
+  }
+
+  .title-container {
+    display: flex;
+    align-items: center;
+
+    .line {
+      flex: 1;
+      height: 1px;
+      background-color: #869198;
     }
   }
+
+  .students {
+    .image-container {
+      min-height: 375px;
+      margin-bottom: 6px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 6px;
+        background: rgb(92, 184, 232);
+        background: linear-gradient(
+          45deg,
+          rgba(0, 127, 255, 1) 0%,
+          rgba(0, 207, 255, 1) 100%
+        );
+      }
+    }
+
+    h4 {
+      @include font-size(2.5rem);
+    }
+
+    
+
+  }
+}
