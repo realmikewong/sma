@@ -120,7 +120,7 @@ $hero_background_image = get_field('hero_background_image'); /** used if the pos
 
       
 
-      <h1 class="<?php echo $textColor; ?>"><?php the_field('header_text_color'); ?> <?php echo the_title(); ?></h1>
+      <h1 class="<?php echo $textColor; ?>"><?php echo the_title(); ?></h1>
       
 
 
